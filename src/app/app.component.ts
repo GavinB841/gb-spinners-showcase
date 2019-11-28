@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GbSpinnerService } from '@gavinb841/gb-spinner';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gb-spinners-showcase';
+  constructor(private gbSpinner: GbSpinnerService) {
+
+  }
+
+  wrapSpinner() {
+    this.gbSpinner.show();
+    setTimeout(() => {
+      this.gbSpinner.hide();
+    }, 2000);
+  }
 }
