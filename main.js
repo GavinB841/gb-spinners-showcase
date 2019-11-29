@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"gb-spinner-demo\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-sm-9\">\n        <h2>Spinners</h2>\n      </div>\n    </div>\n    <button class=\"btn-primary\" (click)=\"wrapSpinner()\">Trigger Spinner</button>\n    <gb-spinner>\n    </gb-spinner>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"gb-spinner-demo\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-sm-9\">\n        <h2>Spinners</h2>\n      </div>\n    </div>\n    <div>\n    <h4>Simple Spinner</h4>\n    <button class=\"spinner-btn\" (click)=\"callSpinner()\">Trigger Spinner</button>\n    <gb-spinner>\n    </gb-spinner>\n    </div>\n    <div>\n      <h4>Bar Spinner</h4>\n      <button class=\"bar-spinner-btn\" (click)=\"callBarSpinner()\">Trigger Bar Spinner</button>\n      <gb-bar-spinner>\n      </gb-bar-spinner>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div class=\"gb-spinner-demo\">\n  <div class=\"container\">\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".btn-primary {\n  color: white;\n  font-weight: bold;\n  background-color: dodgerblue;\n  border-color: black;\n  border-width: 1px;\n  padding: 10px;\n  border-radius: 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxnYm95bGVcXERvY3VtZW50c1xcTXlTaGFyZWRMaWJyYXJ5XFxnYi1zcGlubmVycy1zaG93Y2FzZS9zcmNcXGFwcFxcYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBWTtFQUNaLGtCQUFpQjtFQUNqQiw2QkFBNEI7RUFDNUIsb0JBQW1CO0VBQ25CLGtCQUFpQjtFQUNqQixjQUFhO0VBQ2IsbUJBQWtCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ0bi1wcmltYXJ5IHtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogZG9kZ2VyYmx1ZTtcclxuICBib3JkZXItY29sb3I6IGJsYWNrO1xyXG4gIGJvcmRlci13aWR0aDogMXB4O1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcbiJdfQ== */"
+module.exports = ".spinner-btn {\n  color: white;\n  font-weight: bold;\n  background-color: dodgerblue;\n  border-color: black;\n  border-width: 1px;\n  padding: 10px;\n  border-radius: 5px; }\n\n.bar-spinner-btn {\n  color: white;\n  font-weight: bold;\n  background-color: seagreen;\n  border-color: black;\n  border-width: 1px;\n  padding: 10px;\n  border-radius: 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxnYm95bGVcXERvY3VtZW50c1xcTXlTaGFyZWRMaWJyYXJ5XFxnYi1zcGlubmVycy1zaG93Y2FzZS9zcmNcXGFwcFxcYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBWTtFQUNaLGtCQUFpQjtFQUNqQiw2QkFBNEI7RUFDNUIsb0JBQW1CO0VBQ25CLGtCQUFpQjtFQUNqQixjQUFhO0VBQ2IsbUJBQWtCLEVBQ25COztBQUVEO0VBQ0UsYUFBWTtFQUNaLGtCQUFpQjtFQUNqQiwyQkFBMEI7RUFDMUIsb0JBQW1CO0VBQ25CLGtCQUFpQjtFQUNqQixjQUFhO0VBQ2IsbUJBQWtCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNwaW5uZXItYnRuIHtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogZG9kZ2VyYmx1ZTtcclxuICBib3JkZXItY29sb3I6IGJsYWNrO1xyXG4gIGJvcmRlci13aWR0aDogMXB4O1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcblxyXG4uYmFyLXNwaW5uZXItYnRuIHtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogc2VhZ3JlZW47XHJcbiAgYm9yZGVyLWNvbG9yOiBibGFjaztcclxuICBib3JkZXItd2lkdGg6IDFweDtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDVweDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -57,6 +57,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _gavinb841_gb_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @gavinb841/gb-spinner */ "./node_modules/@gavinb841/gb-spinner/fesm5/gavinb841-gb-spinner.js");
+/* harmony import */ var _gavinb841_gb_bar_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @gavinb841/gb-bar-spinner */ "./node_modules/@gavinb841/gb-bar-spinner/fesm5/gavinb841-gb-bar-spinner.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,15 +69,24 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = /** @class */ (function () {
-    function AppComponent(gbSpinner) {
+    function AppComponent(gbSpinner, gbBarSpinner) {
         this.gbSpinner = gbSpinner;
+        this.gbBarSpinner = gbBarSpinner;
     }
-    AppComponent.prototype.wrapSpinner = function () {
+    AppComponent.prototype.callSpinner = function () {
         var _this = this;
         this.gbSpinner.show();
         setTimeout(function () {
             _this.gbSpinner.hide();
+        }, 2000);
+    };
+    AppComponent.prototype.callBarSpinner = function () {
+        var _this = this;
+        this.gbBarSpinner.show();
+        setTimeout(function () {
+            _this.gbBarSpinner.hide();
         }, 2000);
     };
     AppComponent = __decorate([
@@ -85,7 +95,8 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
         }),
-        __metadata("design:paramtypes", [_gavinb841_gb_spinner__WEBPACK_IMPORTED_MODULE_1__["GbSpinnerService"]])
+        __metadata("design:paramtypes", [_gavinb841_gb_spinner__WEBPACK_IMPORTED_MODULE_1__["GbSpinnerService"],
+            _gavinb841_gb_bar_spinner__WEBPACK_IMPORTED_MODULE_2__["GbBarSpinnerService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -108,12 +119,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _gavinb841_gb_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @gavinb841/gb-spinner */ "./node_modules/@gavinb841/gb-spinner/fesm5/gavinb841-gb-spinner.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _gavinb841_gb_bar_spinner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @gavinb841/gb-bar-spinner */ "./node_modules/@gavinb841/gb-bar-spinner/fesm5/gavinb841-gb-bar-spinner.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -128,7 +141,8 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _gavinb841_gb_spinner__WEBPACK_IMPORTED_MODULE_2__["GbSpinnerModule"]
+                _gavinb841_gb_spinner__WEBPACK_IMPORTED_MODULE_2__["GbSpinnerModule"],
+                _gavinb841_gb_bar_spinner__WEBPACK_IMPORTED_MODULE_4__["GbBarSpinnerModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]

@@ -56830,6 +56830,189 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["Version"]('7.0.4')
 
 /***/ }),
 
+/***/ "./node_modules/@gavinb841/gb-bar-spinner/fesm5/gavinb841-gb-bar-spinner.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@gavinb841/gb-bar-spinner/fesm5/gavinb841-gb-bar-spinner.js ***!
+  \**********************************************************************************/
+/*! exports provided: GbBarSpinnerService, GbBarSpinnerComponent, GbBarSpinnerModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GbBarSpinnerService", function() { return GbBarSpinnerService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GbBarSpinnerComponent", function() { return GbBarSpinnerComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GbBarSpinnerModule", function() { return GbBarSpinnerModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-bar-spinner.service.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbBarSpinnerService = /** @class */ (function () {
+    function GbBarSpinnerService() {
+        this.name = 'spinner';
+        this.spinnerCounter = 0;
+    }
+    /**
+     * @param {?=} text
+     * @return {?}
+     */
+    GbBarSpinnerService.prototype.show = /**
+     * @param {?=} text
+     * @return {?}
+     */
+    function (text) {
+        if (text === void 0) { text = null; }
+        this.spinnerCounter += 1;
+        if (this.spinnerComponent) {
+            this.spinnerComponent.show(text);
+        }
+    };
+    /**
+     * @return {?}
+     */
+    GbBarSpinnerService.prototype.hide = /**
+     * @return {?}
+     */
+    function () {
+        this.spinnerCounter -= 1;
+        if (this.spinnerCounter <= 0) {
+            this.spinnerCounter = 0;
+            if (this.spinnerComponent) {
+                this.spinnerComponent.hide();
+            }
+        }
+    };
+    /**
+     * @param {?} component
+     * @return {?}
+     */
+    GbBarSpinnerService.prototype.registerComponent = /**
+     * @param {?} component
+     * @return {?}
+     */
+    function (component) {
+        this.spinnerComponent = component;
+    };
+    GbBarSpinnerService.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"], args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    /** @nocollapse */
+    GbBarSpinnerService.ctorParameters = function () { return []; };
+    /** @nocollapse */ GbBarSpinnerService.ngInjectableDef = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["defineInjectable"])({ factory: function GbBarSpinnerService_Factory() { return new GbBarSpinnerService(); }, token: GbBarSpinnerService, providedIn: "root" });
+    return GbBarSpinnerService;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-bar-spinner.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbBarSpinnerComponent = /** @class */ (function () {
+    function GbBarSpinnerComponent(spinner) {
+        this.spinner = spinner;
+        this.name = 'spinner';
+        this.text = GbBarSpinnerComponent.getText(this.text);
+        this.isShown = false;
+    }
+    /**
+     * @param {?} text
+     * @return {?}
+     */
+    GbBarSpinnerComponent.getText = /**
+     * @param {?} text
+     * @return {?}
+     */
+    function (text) {
+        return text || 'Loading ...';
+    };
+    /**
+     * @return {?}
+     */
+    GbBarSpinnerComponent.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.text = GbBarSpinnerComponent.getText(this.text);
+        this.isShown = false;
+        this.spinner.registerComponent(this);
+    };
+    /**
+     * @param {?} text
+     * @return {?}
+     */
+    GbBarSpinnerComponent.prototype.show = /**
+     * @param {?} text
+     * @return {?}
+     */
+    function (text) {
+        this.text = GbBarSpinnerComponent.getText(text);
+        this.isShown = true;
+    };
+    /**
+     * @return {?}
+     */
+    GbBarSpinnerComponent.prototype.hide = /**
+     * @return {?}
+     */
+    function () {
+        this.isDisabled = false;
+        this.isShown = false;
+    };
+    GbBarSpinnerComponent.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
+                    selector: 'gb-bar-spinner',
+                    template: "\n      <div class=\"gb-bar-spinner\" [hidden]=\"!isShown\">\n          <div class=\"gb-bar-spinner-modal\" role=\"dialog\" tabindex=\"-1\">\n              <div class=\"gb-bar-spinner-dialog\">\n                  <div class=\"gb-bar-spinner-bars\">\n                  <div></div>\n                  <div></div>\n                  <div></div>\n                  <div></div>\n                  <div></div>\n                  <div></div>\n                  <div></div>\n                  <div></div>\n                  </div>\n              </div>\n              <div class=\"gb-bar-spinner-text\" [innerHTML]=\"text\"></div>\n          </div>\n          <div class=\"gb-bar-spinner-backdrop\"></div>\n      </div>\n  ",
+                    styles: [":host ::ng-deep .gb-bar-spinner{width:100px;height:100px;margin:30px auto;position:relative;text-align:center}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-text{color:#000;font-weight:700;font-size:20px;padding-top:100%}:host ::ng-deep .gb-bar-spinner :host ::ng-deep .gb-bar-spinner-modal{display:block;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;-webkit-overflow-scrolling:touch;outline:0}:host ::ng-deep .gb-bar-spinner :host ::ng-deep .gb-bar-spinner-modal :host ::ng-deep .gb-bar-spinner-dialog{width:100%;max-width:100%;padding:0 10px;position:relative;margin:150px auto auto;-webkit-transform:translate(0,0);transform:translate(0,0);transition:transform .3s ease-out,-webkit-transform .3s ease-out;text-align:center}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div{margin:auto;width:10px;height:30px;background:#000;position:absolute;top:35px;left:45px;opacity:.05;-webkit-animation:1.1s linear infinite fadeit;animation:1.1s linear infinite fadeit}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div:nth-child(1){-webkit-transform:rotate(0) translate(0,-30px);transform:rotate(0) translate(0,-30px);-webkit-animation-delay:.39s;animation-delay:.39s}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div:nth-child(2){-webkit-transform:rotate(45deg) translate(0,-30px);transform:rotate(45deg) translate(0,-30px);-webkit-animation-delay:.52s;animation-delay:.52s}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div:nth-child(3){-webkit-transform:rotate(90deg) translate(0,-30px);transform:rotate(90deg) translate(0,-30px);-webkit-animation-delay:.65s;animation-delay:.65s}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div:nth-child(4){-webkit-transform:rotate(135deg) translate(0,-30px);transform:rotate(135deg) translate(0,-30px);-webkit-animation-delay:.78s;animation-delay:.78s}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div:nth-child(5){-webkit-transform:rotate(180deg) translate(0,-30px);transform:rotate(180deg) translate(0,-30px);-webkit-animation-delay:.91s;animation-delay:.91s}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div:nth-child(6){-webkit-transform:rotate(225deg) translate(0,-30px);transform:rotate(225deg) translate(0,-30px);-webkit-animation-delay:1.04s;animation-delay:1.04s}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div:nth-child(7){-webkit-transform:rotate(270deg) translate(0,-30px);transform:rotate(270deg) translate(0,-30px);-webkit-animation-delay:1.17s;animation-delay:1.17s}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-bars div:nth-child(8){-webkit-transform:rotate(315deg) translate(0,-30px);transform:rotate(315deg) translate(0,-30px);-webkit-animation-delay:1.3s;animation-delay:1.3s}:host ::ng-deep .gb-bar-spinner .gb-bar-spinner-backdrop{opacity:.5;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}@-webkit-keyframes fadeit{0%{opacity:1}100%{opacity:0}}@keyframes fadeit{0%{opacity:1}100%{opacity:0}}"]
+                }] }
+    ];
+    /** @nocollapse */
+    GbBarSpinnerComponent.ctorParameters = function () { return [
+        { type: GbBarSpinnerService }
+    ]; };
+    return GbBarSpinnerComponent;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-bar-spinner.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbBarSpinnerModule = /** @class */ (function () {
+    function GbBarSpinnerModule() {
+    }
+    GbBarSpinnerModule.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"], args: [{
+                    declarations: [GbBarSpinnerComponent],
+                    imports: [],
+                    exports: [GbBarSpinnerComponent]
+                },] }
+    ];
+    return GbBarSpinnerModule;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: gavinb841-gb-bar-spinner.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+
+//# sourceMappingURL=gavinb841-gb-bar-spinner.js.map
+
+/***/ }),
+
 /***/ "./node_modules/@gavinb841/gb-spinner/fesm5/gavinb841-gb-spinner.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/@gavinb841/gb-spinner/fesm5/gavinb841-gb-spinner.js ***!
