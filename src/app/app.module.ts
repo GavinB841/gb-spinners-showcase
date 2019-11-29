@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { GbSpinnerModule } from '@gavinb841/gb-spinner';
 
 import { AppComponent } from './app.component';
+import { GbBarSpinnerModule } from '@gavinb841/gb-bar-spinner';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    GbSpinnerModule
+    GbSpinnerModule,
+    GbBarSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,9 +5,18 @@
         <h2>Spinners</h2>
       </div>
     </div>
-    <button class="btn-primary" (click)="wrapSpinner()">Trigger Spinner</button>
+    <div>
+    <h4>Simple Spinner</h4>
+    <button class="spinner-btn" (click)="callSpinner()">Trigger Spinner</button>
     <gb-spinner>
     </gb-spinner>
+    </div>
+    <div>
+      <h4>Bar Spinner</h4>
+      <button class="bar-spinner-btn" (click)="callBarSpinner()">Trigger Bar Spinner</button>
+      <gb-bar-spinner>
+      </gb-bar-spinner>
+    </div>
   </div>
 </div>
 
