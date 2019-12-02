@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "@gavinb841/gb-bar-spinner": "0.0.1",
+    "@gavinb841/gb-circle-spinner": "0.0.1",
     "@gavinb841/gb-spinner": "0.0.1",
     "core-js": "^2.5.4",
     "request": "^2.79.0",

@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { GbSpinnerModule } from '@gavinb841/gb-spinner';
+import { GbBarSpinnerModule } from '@gavinb841/gb-bar-spinner';
+import { GbCircleSpinnerModule } from '@gavinb841/gb-circle-spinner';
 
 import { AppComponent } from './app.component';
-import { GbBarSpinnerModule } from '@gavinb841/gb-bar-spinner';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { GbBarSpinnerModule } from '@gavinb841/gb-bar-spinner';
   imports: [
     BrowserModule,
     GbSpinnerModule,
-    GbBarSpinnerModule
+    GbBarSpinnerModule,
+    GbCircleSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
