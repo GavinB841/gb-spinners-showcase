@@ -57013,6 +57013,189 @@ var GbBarSpinnerModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./node_modules/@gavinb841/gb-circle-spinner/fesm5/gavinb841-gb-circle-spinner.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@gavinb841/gb-circle-spinner/fesm5/gavinb841-gb-circle-spinner.js ***!
+  \****************************************************************************************/
+/*! exports provided: GbCircleSpinnerService, GbCircleSpinnerComponent, GbCircleSpinnerModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GbCircleSpinnerService", function() { return GbCircleSpinnerService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GbCircleSpinnerComponent", function() { return GbCircleSpinnerComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GbCircleSpinnerModule", function() { return GbCircleSpinnerModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-circle-spinner.service.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbCircleSpinnerService = /** @class */ (function () {
+    function GbCircleSpinnerService() {
+        this.name = 'spinner';
+        this.spinnerCounter = 0;
+    }
+    /**
+     * @param {?=} text
+     * @return {?}
+     */
+    GbCircleSpinnerService.prototype.show = /**
+     * @param {?=} text
+     * @return {?}
+     */
+    function (text) {
+        if (text === void 0) { text = null; }
+        this.spinnerCounter += 1;
+        if (this.spinnerComponent) {
+            this.spinnerComponent.show(text);
+        }
+    };
+    /**
+     * @return {?}
+     */
+    GbCircleSpinnerService.prototype.hide = /**
+     * @return {?}
+     */
+    function () {
+        this.spinnerCounter -= 1;
+        if (this.spinnerCounter <= 0) {
+            this.spinnerCounter = 0;
+            if (this.spinnerComponent) {
+                this.spinnerComponent.hide();
+            }
+        }
+    };
+    /**
+     * @param {?} component
+     * @return {?}
+     */
+    GbCircleSpinnerService.prototype.registerComponent = /**
+     * @param {?} component
+     * @return {?}
+     */
+    function (component) {
+        this.spinnerComponent = component;
+    };
+    GbCircleSpinnerService.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"], args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    /** @nocollapse */
+    GbCircleSpinnerService.ctorParameters = function () { return []; };
+    /** @nocollapse */ GbCircleSpinnerService.ngInjectableDef = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["defineInjectable"])({ factory: function GbCircleSpinnerService_Factory() { return new GbCircleSpinnerService(); }, token: GbCircleSpinnerService, providedIn: "root" });
+    return GbCircleSpinnerService;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-circle-spinner.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbCircleSpinnerComponent = /** @class */ (function () {
+    function GbCircleSpinnerComponent(spinner) {
+        this.spinner = spinner;
+        this.name = 'spinner';
+        this.text = GbCircleSpinnerComponent.getText(this.text);
+        this.isShown = false;
+    }
+    /**
+     * @param {?} text
+     * @return {?}
+     */
+    GbCircleSpinnerComponent.getText = /**
+     * @param {?} text
+     * @return {?}
+     */
+    function (text) {
+        return text || 'Loading ...';
+    };
+    /**
+     * @return {?}
+     */
+    GbCircleSpinnerComponent.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.text = GbCircleSpinnerComponent.getText(this.text);
+        this.isShown = false;
+        this.spinner.registerComponent(this);
+    };
+    /**
+     * @param {?} text
+     * @return {?}
+     */
+    GbCircleSpinnerComponent.prototype.show = /**
+     * @param {?} text
+     * @return {?}
+     */
+    function (text) {
+        this.text = GbCircleSpinnerComponent.getText(text);
+        this.isShown = true;
+    };
+    /**
+     * @return {?}
+     */
+    GbCircleSpinnerComponent.prototype.hide = /**
+     * @return {?}
+     */
+    function () {
+        this.isDisabled = false;
+        this.isShown = false;
+    };
+    GbCircleSpinnerComponent.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
+                    selector: 'gb-circle-spinner',
+                    template: "\n      <div class=\"gb-circle-spinner\" [hidden]=\"!isShown\">\n          <div class=\"gb-circle-spinner-modal\" role=\"dialog\" tabindex=\"-1\">\n              <div class=\"gb-circle-spinner-dialog\">\n                  <div class=\"gb-circle-spinner-bars\">\n                      <div></div>\n                      <div></div>\n                      <div></div>\n                      <div></div>\n                      <div></div>\n                      <div></div>\n                      <div></div>\n                      <div></div>\n                  </div>\n              </div>\n              <div class=\"gb-circle-spinner-text\" [innerHTML]=\"text\"></div>\n          </div>\n          <div class=\"gb-circle-spinner-backdrop\"></div>\n      </div>\n  ",
+                    styles: [":host ::ng-deep .gb-circle-spinner :host ::ng-deep .gb-circle-spinner-modal{display:block;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;-webkit-overflow-scrolling:touch;outline:0}:host ::ng-deep .gb-circle-spinner :host ::ng-deep .gb-circle-spinner-modal :host ::ng-deep .gb-circle-spinner-dialog{width:100%;max-width:100%;padding:0 10px;position:relative;margin:150px auto auto;-webkit-transform:translate(0,0);transform:translate(0,0);transition:transform .3s ease-out,-webkit-transform .3s ease-out;text-align:center}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog{width:100px;height:100px;margin:30px auto;position:relative;-webkit-animation:1.3s linear infinite rotateit;animation:1.3s linear infinite rotateit}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div{width:20px;height:20px;border-radius:50%;background:#000;position:absolute;top:35px;left:45px}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div:nth-child(1){background:#191970;-webkit-transform:rotate(0) translate(0,-35px) scale(1.4);transform:rotate(0) translate(0,-35px) scale(1.4)}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div:nth-child(2){background:#00008b;-webkit-transform:rotate(45deg) translate(0,-35px) scale(1.2);transform:rotate(45deg) translate(0,-35px) scale(1.2);opacity:.7}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div:nth-child(3){background:#0000cd;-webkit-transform:rotate(90deg) translate(0,-35px) scale(1.1);transform:rotate(90deg) translate(0,-35px) scale(1.1);opacity:.6}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div:nth-child(4){background:#00f;-webkit-transform:rotate(135deg) translate(0,-35px) scale(.9);transform:rotate(135deg) translate(0,-35px) scale(.9);opacity:.5}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div:nth-child(5){background:#4169e1;-webkit-transform:rotate(180deg) translate(0,-35px) scale(.7);transform:rotate(180deg) translate(0,-35px) scale(.7);opacity:.4}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div:nth-child(6){background:#1e90ff;-webkit-transform:rotate(225deg) translate(0,-35px) scale(.5);transform:rotate(225deg) translate(0,-35px) scale(.5);opacity:.3}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div:nth-child(7){color:#6495ed;-webkit-transform:rotate(270deg) translate(0,-35px) scale(.3);transform:rotate(270deg) translate(0,-35px) scale(.3);opacity:.2}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-dialog .gb-circle-spinner-bars div:nth-child(8){color:#00bfff;-webkit-transform:rotate(315deg) translate(0,-35px) scale(.1);transform:rotate(315deg) translate(0,-35px) scale(.1);opacity:.1}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-text{color:#191970;font-weight:700;font-size:20px;text-align:center}:host ::ng-deep .gb-circle-spinner .gb-circle-spinner-backdrop{opacity:.5;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}@-webkit-keyframes rotateit{from{-webkit-transform:rotate(360deg)}to{-webkit-transform:rotate(0)}}@keyframes rotateit{from{-webkit-transform:rotate(360deg);transform:rotate(360deg)}to{-webkit-transform:rotate(0);transform:rotate(0)}}"]
+                }] }
+    ];
+    /** @nocollapse */
+    GbCircleSpinnerComponent.ctorParameters = function () { return [
+        { type: GbCircleSpinnerService }
+    ]; };
+    return GbCircleSpinnerComponent;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-circle-spinner.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbCircleSpinnerModule = /** @class */ (function () {
+    function GbCircleSpinnerModule() {
+    }
+    GbCircleSpinnerModule.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"], args: [{
+                    declarations: [GbCircleSpinnerComponent],
+                    imports: [],
+                    exports: [GbCircleSpinnerComponent]
+                },] }
+    ];
+    return GbCircleSpinnerModule;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: gavinb841-gb-circle-spinner.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+
+//# sourceMappingURL=gavinb841-gb-circle-spinner.js.map
+
+/***/ }),
+
 /***/ "./node_modules/@gavinb841/gb-spinner/fesm5/gavinb841-gb-spinner.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/@gavinb841/gb-spinner/fesm5/gavinb841-gb-spinner.js ***!
